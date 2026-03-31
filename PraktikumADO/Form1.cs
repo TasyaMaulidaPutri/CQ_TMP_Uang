@@ -72,9 +72,28 @@ namespace PraktikumADO
             }
         }
 
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Koneksi();
+                conn.Open();
+
+                string query = "SELECT COUNT(*) FROM MataKuliah";
+
+                cmd = new SqlCommand(query, conn);
+
+                int jumlah = (int)cmd.ExecuteScalar();
+
+            }
+
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
-
+            
         }
 
     }

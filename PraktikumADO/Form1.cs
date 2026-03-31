@@ -109,7 +109,14 @@ namespace PraktikumADO
 
                 cmd = new SqlCommand(query, conn);
 
+                int jumlah = (int)cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Jumlah baris terpengaruh : " + txtHasil);
+
+                conn.Close();
+
             }
+            
 
         }
     }

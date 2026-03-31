@@ -19,7 +19,7 @@ namespace PraktikumADO
         private void Koneksi ()
         {
             conn = new SqlConnection(
-                "Data Source =LAPTOP-7BCU6RBN\\TASYAMAULIDA;Initial Catalog=DBAkademikADO;Intergrated Security=True"
+                "Data Source =LAPTOP-7BCU6RBN\\TASYAMAULIDA;Initial Catalog=DBAkademikADO;Integrated Security=True"
                 );
         }
         public Form1()
@@ -120,6 +120,11 @@ namespace PraktikumADO
             {
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -190,7 +190,10 @@ namespace PraktikumADO
                 int hasil = cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Data berhasil ditambahkan: " + hasil);
+
+                conn.Close();
             }
+
         }
     }
 }

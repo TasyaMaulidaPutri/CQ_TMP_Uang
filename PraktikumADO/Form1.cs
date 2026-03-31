@@ -109,9 +109,9 @@ namespace PraktikumADO
 
                 cmd = new SqlCommand(query, conn);
 
-                int jumlah = (int)cmd.ExecuteNonQuery();
+                int hasil = cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Jumlah baris terpengaruh : " + txtHasil);
+                MessageBox.Show("Jumlah baris terpengaruh : " + hasil);
 
                 conn.Close();
 

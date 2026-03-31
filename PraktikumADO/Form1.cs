@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Linq.Expressions;
 
 namespace PraktikumADO
 {
@@ -153,19 +154,25 @@ namespace PraktikumADO
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Koneksi();
-            conn.Open();
+            try
+            {
+                Koneksi();
+                conn.Open();
 
-            string query = "UPDATE MataKuliah SET SKS = 4 WHERE KodeMK = 'IF210101'";
-            cmd = new SqlCommand(query, conn);
+                string query = "UPDATE MataKuliah SET SKS = 4 WHERE KodeMK = 'IF210101'";
+                cmd = new SqlCommand(query, conn);
 
 
-            int jumlah = cmd.ExecuteNonQuery();
+                int jumlah = cmd.ExecuteNonQuery();
 
-            MessageBox.Show("Jumlah data terupdate: " + jumlah);
+                MessageBox.Show("Jumlah data terupdate: " + jumlah);
 
-            conn.Close();
+                conn.Close();
+
+            }
+            
 
         }
+        
     }
 }

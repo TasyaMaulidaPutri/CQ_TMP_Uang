@@ -163,9 +163,9 @@ namespace PraktikumADO
                 cmd = new SqlCommand(query, conn);
 
 
-                int jumlah = cmd.ExecuteNonQuery();
+                int hasil = cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Jumlah data terupdate: " + jumlah);
+                MessageBox.Show("Jumlah data terupdate: " + hasil);
 
                 conn.Close();
 
@@ -176,6 +176,21 @@ namespace PraktikumADO
             }
 
         }
-        
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                string query = "INSERT INTO ProgramStudi VALUES ('MI01','Manajemen Informatika')";
+                cmd = new SqlCommand(query, conn);
+
+                int hasil = cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Data berhasil ditambahkan: " + hasil);
+            }
+        }
     }
 }

@@ -162,6 +162,9 @@ namespace PraktikumADO
 
             int jumlah = cmd.ExecuteNonQuery();
 
+            MessageBox.Show("Jumlah data terupdate: " + jumlah);
+
+            conn.Close();
 
         }
     }

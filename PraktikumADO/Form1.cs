@@ -66,6 +66,10 @@ namespace PraktikumADO
 
                 conn.Close();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

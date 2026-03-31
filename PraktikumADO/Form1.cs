@@ -16,7 +16,7 @@ namespace PraktikumADO
         SqlConnection conn;
         SqlCommand cmd;
 
-        private void koneksi ()
+        private void Koneksi ()
         {
             conn = new SqlConnection(
                 "Data Source =LAPTOP-7BCU6RBN\\TASYAMAULIDA;Initial Catalog=DBAkademikADO;Intergrated Security=True"
@@ -34,7 +34,16 @@ namespace PraktikumADO
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Koneksi();
+                conn.Open();
 
+                MessageBox.Show("Koneksi ke database berhasil");
+
+                conn.Close();
+
+            }
         }
     }
 }

@@ -49,7 +49,7 @@ namespace PraktikumADO
             }
         }
 
-        private void btnHitungMhs_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -61,8 +61,17 @@ namespace PraktikumADO
                 cmd = new SqlCommand(query, conn);
 
                 int jumlah = (int)cmd.ExecuteScalar();
+
+                txtHasil.Text = jumlah.ToString();
+
+                conn.Close();
             }
-            
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
